@@ -1,7 +1,7 @@
 //声明变量
 var $a=$(".buttons a");
 var $s=$(".buttons span");
-var cArr=["p1","p2","p3","p4","p5"];
+var cArr=["p1","p2","p3","p4","p5","p6","p7"];
 var index=0;
 
 $(".next").click(
@@ -17,7 +17,7 @@ $(".prev").click(
 
 //上一张
 function previmg(){
-	cArr.unshift(cArr[5]);
+	cArr.unshift(cArr[6]);
 		cArr.pop();
 		//i是元素的索引，从0开始
 		//e为当前处理的元素
@@ -27,7 +27,7 @@ function previmg(){
 		})
 		index--;
 		if (index<0) {
-			index=4;
+			index=6;
 		}
 		show();
 }
@@ -40,7 +40,7 @@ function nextimg(){
 			$(e).removeClass().addClass(cArr[i]);
 		})
 		index++;
-		if (index>4) {
+		if (index>6) {
 			index=0;
 		}
 		show();
