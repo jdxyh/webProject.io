@@ -81,6 +81,14 @@ img{
 	transform:translate3d(672px,0,0) scale(0.81);
 }
 
+.p6{
+	transform:translate3d(896px,0,0) scale(0.81);	
+}
+
+.p7{
+	transform:translate3d(1120px,0,0) scale(0.81);
+}
+
 .buttons{
 	position: absolute;
 	width: 1200px;
