@@ -39,6 +39,35 @@ function reverseString2(str){
 	return newString;
 }
 
+/**
+ * 2 JavaScript算法练习:数字阶乘
+ * 
+ * 目标：输入数字，计算出该数字的阶乘
+ * 
+ * 方法1：使用递归方法进行计算
+ * 
+ * 方法2：使用for循环进行计算
+ */
+
+function factorial(num){
+	
+	return num > 1 ? num * factorial(num - 1) : 1;
+}
+
+function factorial2(num){
+	var result = 1;
+	
+	for(var i = 1;i <= num;i++){
+		result *= i;
+	}
+	
+	return result;
+}
+
+alert(factorial2(3));
+
+alert(factorial(5));
+
 alert(reverseString("hello"));
 
 alert(reverseString2("javascript"));
