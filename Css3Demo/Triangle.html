@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS三角形的绘画原理</title>
+		<style>
+			/* border边框由四个三角形组成。设置width,height为40px 
+			  	可以抠出一个40px的正方形。同理，width,height高度设置为0,则变成四个三角形填充而成 的正方形
+			 */
+			.border{
+				width: 40px;
+				height: 40px;
+				border-width: 40px;
+				border-style: solid;
+				/* 设置四个三角形的颜色，可以使其他三个为透明，剩下一个就为目标所得三角形 */
+				border-color: red green blue brown; 
+			}
+		</style>
+	</head>
+	<body>
+		<div class="border"></div>
+	</body>
+</html>

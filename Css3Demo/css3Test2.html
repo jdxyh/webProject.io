@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS3制作手风琴效果</title>
+		<style type="text/css">
+			.accordionMenu{
+				background: #fff;
+				color: #ffd966;
+				font: 12px arial, verdana, sans-serif; 
+				width: 500px;
+				padding: 10px;
+				margin: 0 auto;
+			}
+			.accordionMenu h2{
+				margin: 5px 0;
+				padding: 0;
+				position: relative;
+			}
+			.accordionMenu h2 a{
+				/* 制作手风琴标题栏的效果 */
+				background: #8f8f8f;
+				/* css3添加圆角边框 border-radius */
+				border-radius: 5px;
+				color: #424242;
+				display: block;
+				font-size: 13px;
+				font-weight: normal;
+				margin: 0;
+				padding: 10px 10px;
+				text-shadow: 2px 2px 2px #aeaeae;
+				text-decoration: none;
+			}
+			.accordionMenu h2:before{
+				/* 制作向下的效果 */
+				border: 5px solid #fff;
+				border-color: #fff transparent transparent; 
+				content: "";
+				height: 0;
+				position: absolute;
+				right: 10px;
+				top: 15px;
+				width: 0;
+		  }
+			/* 目标标题效果 */
+			.accordionMenu :target h2 a,
+			
+		</style>
+	</head>
+	<body>
+		<div class="accordionMenu">
+			<div class="menuSection" id="brand">
+				<h2><a href="#brand">Brand</a></h2>
+				<p>Lorem ipsum doloor...</p>
+			</div>
+			<div class="menuSection" id="promotion">
+				<h2><a href="#promotion">Promotion</a></h2>
+				<p>Lorem ipsum doloor sit amet...</p>
+			</div>
+			<div class="menuSection" id="event">
+				<h2><a href="#event">Event</a></h2>
+				<p>Lorem ipsum doloor sit amet...</p>
+			</div>
+		</div>
+	</body>
+</html>
