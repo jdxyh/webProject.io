@@ -32,11 +32,13 @@
 				text-decoration: none;
 			}
 			.accordionMenu h2:before{
-				/* 制作向下的效果 */
+				/* 制作三角形向下的效果 */
 				border: 5px solid #fff;
+				/* 上 右  下 */
 				border-color: #fff transparent transparent; 
 				content: "";
 				height: 0;
+				/* 此处应当添加绝对布局 */
 				position: absolute;
 				right: 10px;
 				top: 15px;
@@ -44,7 +46,31 @@
 		  }
 			/* 目标标题效果 */
 			.accordionMenu :target h2 a,
-			
+			.accordionMenu h2 a :focus,
+			.accordionMenu h2 a :hover,
+			.accordionMenu h2 a :active{
+				background: #2288dd;
+				color: #fff;
+			}
+			.accordionMenu p {
+				/* 标题栏对应内容,突出显示活动的 HTML 锚*/
+				margin: 0;
+				/* 默认栏目内容高度为0，达到隐藏效果*/
+				height: 0;
+				overflow: hidden;
+				padding: 0 10px;
+				transition: height 0.5s ease-in;
+			}
+			/* 显示内容的关键代码 */
+			.accordionMenu :target p{
+				/* 展示对应目标内容 */
+				height: 100px;
+				overflow: auto;
+			}
+			.accordionMenu :target h2 :before{
+				/* 展示时标题三角效果 */
+				border-color: transparent transparent transparent #fff; 
+			}
 		</style>
 	</head>
 	<body>
